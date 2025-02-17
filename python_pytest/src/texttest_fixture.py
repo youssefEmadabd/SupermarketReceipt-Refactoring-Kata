@@ -7,10 +7,10 @@ texttest -a sr -d .
 import sys,csv
 from pathlib import Path
 
-from model_objects import Product, SpecialOfferType, ProductUnit
-from receipt_printer import ReceiptPrinter
-from shopping_cart import ShoppingCart
-from teller import Teller
+from src.model_objects import Product, SpecialOfferType, ProductUnit
+from tests.receipt_printer import ReceiptPrinter
+from src.shopping_cart import ShoppingCart
+from src.teller import Teller
 from tests.fake_catalog import FakeCatalog
 
 

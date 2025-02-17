@@ -1,6 +1,6 @@
 import math
 
-from model_objects import ProductQuantity, SpecialOfferType, Discount
+from src.model_objects import Offer, ProductQuantity, SpecialOfferType, Discount
 
 
 class ShoppingCart:
@@ -31,7 +31,7 @@ class ShoppingCart:
         for p in self._product_quantities.keys():
             quantity = self._product_quantities[p]
             if p in offers.keys():
-                offer = offers[p]
+                offer: Offer = offers[p]
                 unit_price = catalog.unit_price(p)
                 quantity_as_int = int(quantity)
                 discount = None
